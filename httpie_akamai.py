@@ -125,7 +125,7 @@ class AkamaiHTTPAdapter(HTTPAdapter):
         elif scheme == 'akp-http':
             netloc += '.edgesuite.net'
             scheme = 'http'
-        if scheme == 'aks-https':
+        elif scheme == 'aks-https':
             netloc += '.edgekey-staging.net'
             scheme = 'https'
         elif scheme == 'akp-https':
@@ -136,7 +136,7 @@ class AkamaiHTTPAdapter(HTTPAdapter):
         elif scheme == 'ak-https':
             scheme = 'https'
         else:
-            raise Exception("Invalid schema %s" % scheme)
+            raise Exception("Invalid Akamai schema %s" % scheme)
         self.modified_hostname = netloc
         url = urlunsplit((scheme, netloc, path, query, fragment))
         return super(AkamaiHTTPAdapter, self).get_connection(url, proxies)
