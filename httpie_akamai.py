@@ -3,11 +3,16 @@ Akamai utility plugins for Httpie. Colorize Akamai headers and modify request he
 """
 import os
 import re
-from httpie.plugins import TransportPlugin, FormatterPlugin
-from urlparse import urlsplit, urlunsplit
 from requests.adapters import HTTPAdapter
 
-__version__ = '0.1.0'
+try:
+    from urllib.parse import urlsplit, urlunsplit
+except ImportError:
+    from urlparse import urlsplit, urlunsplit
+
+from httpie.plugins import TransportPlugin, FormatterPlugin
+
+__version__ = '0.1.4'
 __author__ = 'Matt Eckhaus'
 __licence__ = 'BSD'
 
