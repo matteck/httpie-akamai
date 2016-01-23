@@ -8,7 +8,7 @@ setup(
     name='httpie-akamai',
     description='Akamai utility plugins for HTTPie.',
     long_description=open('README.rst').read().strip(),
-    version='0.1.4',
+    version='0.1.5',
     author='Matt Eckhaus',
     author_email='matt@eckha.us',
     license='BSD',
