@@ -27,7 +27,7 @@ setup(
     install_requires=[
         'httpie>=0.9.0',
         'requests',
-        'urlparse'
+        'urlparse3'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',

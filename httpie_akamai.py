@@ -130,9 +130,10 @@ class AkamaiHTTPAdapter(HTTPAdapter):
             scheme = 'http'
         elif scheme == 'ak-https':
             scheme = 'https'
+        else:
+            raise Exception("Invalid schema %s" % scheme)
         self.modified_hostname = netloc
         url = urlunsplit((scheme, netloc, path, query, fragment))
-        print(url)
         return super(AkamaiHTTPAdapter, self).get_connection(url, proxies)
 
     def add_headers(self, request, **kwargs):
