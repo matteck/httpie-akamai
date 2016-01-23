@@ -9,10 +9,11 @@ ehthumbs.db
 Thumbs.db
 .fuse*
 
-*egg-info*
+*.pyc
+*.egg-info
+/build
+/dist
 
 # Atom build file
 .build-python3.json
 .atom-build.json
-
-*.pyc
