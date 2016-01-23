@@ -16,8 +16,6 @@ Installation
 
     $ pip install httpie-akamai
 
-You should now see ``hmac`` under ``--auth-type`` in ``$ http --help`` output.
-
 Usage
 -----
 
